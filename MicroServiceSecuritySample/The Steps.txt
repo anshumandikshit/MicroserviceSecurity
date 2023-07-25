@@ -1,0 +1,6 @@
+Register the Product App in AAD
+Then get the app ID,TenantID,authority 
+Expose it as an API
+then Create the Scopes by which someone will access this API
+then create the Roles based on users and Groups (Products.ReadOnly,Orders.ReadOnly)
+Then 
