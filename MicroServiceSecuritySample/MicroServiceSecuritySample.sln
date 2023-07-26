@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.API", "Product.API\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{BEF7DED2-F2D6-46D6-96F4-2200CD796540}"
 	ProjectSection(SolutionItems) = preProject
+		Authentication and Authorization(S2S communication (on-be-half-flow)).docx = Authentication and Authorization(S2S communication (on-be-half-flow)).docx
 		The Steps.txt = The Steps.txt
 	EndProjectSection
 EndProject

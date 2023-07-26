@@ -3,4 +3,10 @@ Then get the app ID,TenantID,authority
 Expose it as an API
 then Create the Scopes by which someone will access this API
 then create the Roles based on users and Groups (Products.ReadOnly,Orders.ReadOnly)
-Then 
+Then By using Connected Apps Create the Authentication codes in the Program.cs
+then add your Postman as a client app to this API(in AAD go to the ProductAPI app and add the Client App which has been registered as Postman in the Expose API section with proper scope permissions)
+Give the postman Client App Authorized for One of the Scopes in ProductAPI .(This needs to be done as one scope has to be present while Creating the JWT token0)
+	-for an Example suppose you have three scopes (ScopedForOrders,ScopedForCatalgoue,ScopedForSavedToKart,Common) in ProductAPI,
+	-suppose I want to have a JWT token for 'ScopeForOrders' only , If you have not assigned your clientApp(Postman) with atleast one scope , By default it will return all the scopes ((ScopedForOrders,ScopedForCatalgoue,ScopedForSavedToKart,Common)) even though you have asked for one specific scope
+	-So its a good practice to add a scope (Common)to the client app and then generate authorize token with only scope 'ScopeForOrders' if this is JWT token is being called from Orders service to interact with Product Service only
+
