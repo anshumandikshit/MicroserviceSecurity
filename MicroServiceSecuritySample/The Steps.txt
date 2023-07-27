@@ -9,4 +9,6 @@ Give the postman Client App Authorized for One of the Scopes in ProductAPI .(Thi
 	-for an Example suppose you have three scopes (ScopedForOrders,ScopedForCatalgoue,ScopedForSavedToKart,Common) in ProductAPI,
 	-suppose I want to have a JWT token for 'ScopeForOrders' only , If you have not assigned your clientApp(Postman) with atleast one scope , By default it will return all the scopes ((ScopedForOrders,ScopedForCatalgoue,ScopedForSavedToKart,Common)) even though you have asked for one specific scope
 	-So its a good practice to add a scope (Common)to the client app and then generate authorize token with only scope 'ScopeForOrders' if this is JWT token is being called from Orders service to interact with Product Service only
-
+	-CLick on the "Expose API" , define a scope for ProductAPI as 'ProductAPI.Common'
+	-Then Add a client Application and add the PostMan Client App by using the AppID(which has been registered as the App registration). then Give the "Product.Common" as authorized Scope only
+	- Then in Postman request for Authorization 

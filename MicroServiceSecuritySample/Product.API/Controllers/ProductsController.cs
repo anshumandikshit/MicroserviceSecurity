@@ -16,12 +16,14 @@ namespace Product.API.Controllers
         private static readonly List<ProductsDto> _productDetails = new ProductMockDatas().GetProductData();
         
         [HttpGet()]
+        [Authorize(Roles = "Products.WriteOnly")]
         public ActionResult<IEnumerable<ProductsDto>> GetProductsData()
         {
             return Ok(_productDetails);
         }
 
         [HttpGet("{productId}")]
+        [Authorize(Roles = "Products.WriteOnly")]
         public ActionResult<ProductsDto> GetProductsDataById(int productId)
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(requiredScopes);
